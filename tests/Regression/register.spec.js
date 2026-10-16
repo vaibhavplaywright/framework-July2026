@@ -13,7 +13,9 @@ test("Registration test1", async ({ page, registrationPage }) => {
   expect(await registrationPage.getSuccessfulRegistrationMessage()).toContain(
     "Signup successfully, Please login!",
   );
-  test("Registration test2", async ({ page, registrationPage }) => {
+});
+
+test("Registration test2", async ({ page, registrationPage }) => {
   await page.goto("/signup");
   // const registrationPage = new RegistrationPage(page);
   await registrationPage.userDetails(user.username, user.email, user.password);
